@@ -1,0 +1,106 @@
+D:\2566_1\Network Programming\NP-Code\Run>java DiningPhilosophers 5
+|THK|---|---|---|---|           |  |  |  |  |  |
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|THK|EAT|THK|EAT|THK|           |  |P1|P1|P3|P3|
+|THK|EAT|THK|EAT|THK|           |  |P1|P1|P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|THK|EAT|THK|THK|THK|           |  |P1|P1|  |  |
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|EAT|THK|EAT|THK|           |  |P1|P1|P3|P3|
+|THK|EAT|THK|THK|THK|           |  |P1|P1|  |  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|EAT|THK|EAT|THK|           |  |P1|P1|P3|P3|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|EAT|THK|THK|THK|           |  |P1|P1|  |  |
+|THK|EAT|THK|EAT|THK|           |  |P1|P1|P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|EAT|THK|THK|EAT|           |P4|P1|P1|  |P4|
+|THK|EAT|THK|THK|THK|           |  |P1|P1|  |  |
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|THK|THK|THK|THK|THK|           |  |  |  |  |  |
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|THK|THK|EAT|THK|EAT|           |P4|  |P2|P2|P4|
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|THK|THK|THK|EAT|THK|           |  |  |  |P3|P3|
+|EAT|THK|THK|EAT|THK|           |P0|P0|  |P3|P3|
+|EAT|THK|THK|THK|THK|           |P0|P0|  |  |  |
+|EAT|THK|EAT|THK|THK|           |P0|P0|P2|P2|  |
+|THK|THK|EAT|THK|THK|           |  |  |P2|P2|  |
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+|THK|THK|THK|THK|EAT|           |P4|  |  |  |P4|
+P0: eat 15 times
+P1: eat 8 times
+P2: eat 12 times
+P3: eat 13 times
+P4: eat 11 times
