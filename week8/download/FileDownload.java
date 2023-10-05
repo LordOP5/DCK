@@ -14,19 +14,22 @@ public class FileDownload {
             pw.println(args[0]);
             pw.flush();
             String response = br.readLine();
-            if(response.equals("OK")) {
+            if (response.equals("OK")) {
                 File f = new File(args[0]);
                 FileOutputStream fout = new FileOutputStream(f);
                 byte[] b = new byte[65536];
                 int size;
-                while((size = in.read(b)) > 0) {
+                while ((size = in.read(b)) > 0) {
                     fout.write(b, 0, size);
                 }
                 in.close();
+                fout.close();
             } else {
                 System.out.println("No file found on server");
             }
             s.close();
-        } catch (Exception e) { e.printStackTrace(); }
-    } 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

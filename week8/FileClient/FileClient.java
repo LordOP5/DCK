@@ -29,13 +29,13 @@ public class FileClient {
 
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
             PrintWriter pw = new PrintWriter(out);
-            
+
             pw.println(command);
             pw.flush();
 
             if (command.equals("list")) {
                 String filename;
-                while((filename = br.readLine()) != null) {
+                while ((filename = br.readLine()) != null) {
                     System.out.println(filename);
                 }
             } else if (command.equals("upload")) {
@@ -46,11 +46,11 @@ public class FileClient {
                 pw.flush();
 
                 String response = br.readLine();
-                if(response.equals("OK")) {
+                if (response.equals("OK")) {
                     FileInputStream fin = new FileInputStream(fu);
                     byte[] buffer = new byte[65536];
                     int size;
-                    while((size = fin.read(buffer)) != -1) {
+                    while ((size = fin.read(buffer)) != -1) {
                         out.write(buffer, 0, size);
                     }
                     out.flush();
@@ -66,13 +66,14 @@ public class FileClient {
                 pw.flush();
 
                 String res = br.readLine();
-                if(res.equals("OK")) {
+                if (res.equals("OK")) {
                     FileOutputStream fout = new FileOutputStream(fd);
                     byte[] bufferr = new byte[65536];
                     int sizes;
-                    while((sizes = in.read(bufferr)) != -1) {
+                    while ((sizes = in.read(bufferr)) != -1) {
                         fout.write(bufferr, 0, sizes);
                     }
+                    fout.close();
                 } else {
                     System.out.println(filedown + " not found");
                 }
@@ -84,6 +85,8 @@ public class FileClient {
             in.close();
             out.close();
             s.close();
-        } catch (Exception e) { e.printStackTrace(); }
-    } 
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

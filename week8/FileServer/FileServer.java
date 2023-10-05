@@ -40,7 +40,7 @@ public class FileServer implements Runnable {
                         fout.write(buffer, 0, size);
                     }
                     fout.close();
-                }          
+                }
             } else if (command.equals("download")) {
                 String filedown = br.readLine();
                 File fff = new File(filedown);
@@ -57,6 +57,7 @@ public class FileServer implements Runnable {
                         out.write(bufferr, 0, sizes);
                     }
                     out.flush();
+                    fin.close();
                 }
             } else {
                 pw.println("Command not found");
@@ -65,7 +66,9 @@ public class FileServer implements Runnable {
             in.close();
             out.close();
             s.close();
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
@@ -79,6 +82,8 @@ public class FileServer implements Runnable {
                 FileServer fs = new FileServer(s);
                 es.execute(fs);
             }
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

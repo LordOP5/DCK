@@ -18,7 +18,7 @@ public class FileServerDownload implements Runnable {
 
             String filename = br.readLine();
             File f = new File(filename);
-            if(!f.exists()) {
+            if (!f.exists()) {
                 pw.println("NOK");
                 pw.flush();
             } else {
@@ -27,25 +27,30 @@ public class FileServerDownload implements Runnable {
                 FileInputStream fin = new FileInputStream(f);
                 byte[] buffer = new byte[65536];
                 int size;
-                while((size = fin.read(buffer)) > 0) {
+                while ((size = fin.read(buffer)) > 0) {
                     out.write(buffer, 0, size);
                 }
                 out.flush();
+                fin.close();
             }
             out.close();
             s.close();
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public static void main(String[] args) {
         try {
             ServerSocket serv = new ServerSocket(5678);
-            while(true) {
+            while (true) {
                 Socket s = serv.accept();
                 FileServerDownload fs = new FileServerDownload(s);
                 Thread t = new Thread(fs);
                 t.start();
             }
-        } catch (Exception e) { e.printStackTrace(); }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
